@@ -43,6 +43,7 @@ def process_txt(input_file, output_file, author, title):
     pandoc_start = write_end
     pandoc_command = [
         'pandoc', temp_txt_file, '-o', output_file,
+        '--epub-chapter-level=2',
         '--metadata', f'author={author}',
         '--metadata', f'title={title}'
     ]
